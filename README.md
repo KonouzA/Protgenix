@@ -20,12 +20,13 @@ Design, validate, and analyze protein structures using an orchestrated pipeline 
 
 ## 🧪 Agents and Responsibilities
 
-| Agent Name               | Description |
-|--------------------------|-------------|
-| `Planner` | Resolves biological and medical abbreviation ambiguity |
-| `SymptomAnalyzer`           | Interprets biological functions or pathologies from input queries |
-| `DrugAdvisor`               | Suggests known modulators, ligands, or inhibitors (via UniProt/PubMed RAG) |
-| `DiagnosticSummarizer`     | Consolidates output into a biological hypothesis |
+| **Agent Name**             | **Description**                                                                                                                                                                            |
+| -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Planner Agent**          | Parses the user's protein design request and generates a structured, multi-step plan using predefined tool schemas and a language model.                                                   |
+| **Executor Agent**         | Executes each planned step by calling the appropriate tool with validated parameters, and records the results and progress.                                                                |
+| **Evaluator Agent**        | Reviews tool outputs and scores them based on technical metrics (e.g., pLDDT), domain knowledge (e.g., structure alignment), and match with user constraints (e.g., CATH class, symmetry). |
+| **Revision Planner Agent** | Analyzes low-scoring steps and revises them using heuristics, memory of past successes, or LLM-based reasoning to improve overall design performance.                                      |
+
 
 ---
 

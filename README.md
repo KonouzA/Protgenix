@@ -55,7 +55,7 @@ Design, validate, and analyze protein structures using an orchestrated pipeline 
 ---
 
 ## 📊 Notebooks
-- `prot.ipynb` – Generating protein sequences with custom constraints  
+- `protgenix.ipynb` – Generating protein sequences with custom constraints  
 
 
 ---
